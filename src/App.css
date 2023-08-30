@@ -1,38 +1,403 @@
-.App {
-  text-align: center;
+
+.preview-card {
+    padding: 0;
+    margin-top: 1rem;
+    /*border: 0.2rem solid #AD54E3;*/
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 86px rgba(166, 54, 235, 0.82);
+    /*box-shadow: 0px 0px 20px rgba(205, 188, 226, 0.2), inset 0px 0px 86px rgba(166, 54, 235, 0.82);*/
+    backdrop-filter: blur(13px);
+    flex: none;
+    order: 0;
+    /*border-radius: 2rem;*/
+    flex-grow: 0;
+    z-index: 0;
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 0.2));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10rem), calc(100% - 2.5rem) calc(100% - 7.9rem), calc(100% - 2.5rem) calc(100% - 2rem), calc(100% - 5rem) 100%, 0 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.preview-effect {
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    top: calc(100% - 10rem)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-registration-card {
+    margin: 0;
+    clip-path: polygon(0 0, calc(100% - 2.2rem) 0, 100% 2.2rem, 100% 100%, 2.2rem 100%, 0 calc(100% - 2.2rem));
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(205, 188, 226, 0.2), inset 0 0 86px rgba(166, 54, 235, 0.82);
+    backdrop-filter: blur(13px);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.preview-card-holder {
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+    background-color: black;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span {
+    font-size: 0.9rem !important;
+}
+
+.product-content {
+    margin-top: 1rem;
+}
+
+.title {
+    margin-left: 3rem;
+    color: snow !important;
+}
+
+.a-href {
+    margin-bottom: 0.5rem
+}
+
+nav {
+    border-bottom: white;
+    border-bottom-width: 2rem;
+}
+
+.white-bar {
+    height: 1px;
+    background-color: white;
+}
+
+.card-p {
+    font-weight: 10 !important;
+    font-size: 1.1rem;
+}
+
+.card-h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
+.login-registration-title {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(100% - 0.1rem);
+    color: #FFFFFF;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.lgrg-div-i {
+    margin-top: 1.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inp {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1000px;
+    width: 100%;
+    color: white;
+}
+
+.inp:focus {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1000px;
+    color: white;
+}
+
+.lgrg-label {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 19px;
+}
+
+.lgrg-q {
+    margin-top: 1.5rem;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 19px;
+}
+
+.lgrg-btn {
+    font-family: 'Inter', serif;
+    width: 47%;
+    height: 3rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    background: #6B3C88;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lgrg-btn:active {
+    font-family: 'Inter', serif;
+    width: 47%;
+    height: 3rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #4d2b64;
+}
+
+.profile-card-out {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(205, 188, 226, 0.2), inset 0 0 86px rgba(166, 54, 235, 0.82);
+    backdrop-filter: blur(13px);
+    padding-top: 1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+    border-radius: 0.7rem;
+}
+
+
+.profile-title {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    /* Inside auto layout */
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.casino-card {
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+    clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
+}
+
+.casino-box {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(205, 188, 226, 0.2), inset 0 0 86px rgba(166, 54, 235, 0.82);
+    backdrop-filter: blur(13px);
+    margin-bottom: 1.5rem;
+    width: 100%;
+    min-height: 10rem;
+}
+
+
+.casino-left-box {
+    height: calc(100% - 1.5rem);
+}
+
+.casino-right-box {
+    height: calc(50% - 1.5rem);
+}
+
+
+.casino-columns {
+    margin-bottom: 1.5rem !important;
+}
+
+.casino-card-in {
+    margin: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem !important;
+    width: 100%;
+    min-height: 40rem;
+}
+
+.casino-box-in {
+    margin: 0;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.7rem !important;
+    max-width: 100%;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.trash {
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+
+.casino-place {
+    height: 100% !important;
+    padding-top: 0.7rem;
+    padding-left: 0.7rem;
+    padding-bottom: 1rem;
+}
+
+
+.trash:hover {
+    color: #9a9a9a;
+}
+
+.trash:active {
+    color: black;
+}
+
+.create-raw {
+    width: calc(90% - 0.1rem);
+}
+
+.casino-row {
+    margin-bottom: 1rem;
+}
+
+h6 {
+    margin: 0;
+}
+
+.casino-place-in {
+
+
+}
+
+
+.casino-btn {
+    font-family: 'Inter', serif;
+    max-height: 2.5rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    background: #6B3C88;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: auto;
+    margin-bottom: .7rem;
+}
+
+.casino-btn:active {
+    font-family: 'Inter', serif;
+    max-height: 2.5rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #4d2b64;
+}
+
+.casino-input {
+    background: rgba(107, 60, 137, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.05) !important;
+    margin-bottom: 0.7rem;
+    border-radius: 1000px;
+    color: white;
+    max-height: 2.5rem;
+}
+
+.casino-input:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(91, 53, 117, 0.7);
+    border-radius: 1000px;
+    color: white;
+    max-height: 2.5rem;
+}
+
+.profile-card {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem 0.5rem 1.2rem;
+    text-decoration: none !important;
+    color: white !important;
+    width: 100%;
+    border: solid 2px rgb(80, 80, 80, 0.5);
+    border-radius: 1rem;
+}
+
+.logout-btn {
+    font-family: 'Inter', serif;
+    height: 2.5rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    background: #6B3C88;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.logout-btn:active {
+    font-family: 'Inter', serif;
+    height: 2.5rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% calc(100% - 2.1rem), 100% 100%, 0.9rem 100%, 0 2.1rem);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #4d2b64;
+}
+
+input:focus {
+    box-shadow: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+
+.admin-card {
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+    box-shadow: inset 0 0 86px rgba(166, 54, 235, 0.82);
+    /*box-shadow: 0px 0px 20px rgba(205, 188, 226, 0.2), inset 0px 0px 86px rgba(166, 54, 235, 0.82);*/
+    backdrop-filter: blur(13px);
+
+}
+
+.admin-row {
+    font-size: 2.5rem !important;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.check-input {
+    width: 1.2rem;
+    margin-left: 1rem;
+}
+
+.admin-card-in {
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
 }
